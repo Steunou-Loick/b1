@@ -1,0 +1,332 @@
+/************************* partie générale  ****************************************************/
+
+
+/* Corps de la page  ==>   couleur de fond : gainsboro  / couleur texte : #330099 */
+
+body {
+    background-color: gainsboro;
+    color: #330099;
+    /*****************************************************************************************/
+    /**** à rajouter pour ne pas avoir d'espace entre le bord de l'écran et les divisions ****/
+}
+
+
+/* les liens  */
+
+a:link {
+    color: #336666;
+    text-decoration: underline;
+}
+
+
+/* lien non visité :  #336666 -  souligné */
+
+a:visited {
+    color: #336666;
+    text-decoration: underline;
+}
+
+
+/* lien visité : #336666 - souligné */
+
+a:hover {
+    color: #990000;
+    text-decoration: none;
+}
+
+
+/* quand on passe sur le lien : #990000 */
+
+
+/* h1 ==> centrer */
+
+h1 {
+    text-align: center;
+}
+
+
+/* tous les paragraphes  : taille de la police de 18px */
+
+p {
+    font-size: 18 px;
+}
+
+
+/********** division : partie centrale *******************************/
+
+
+/** positionnement de la division "PartieCentrale"  **/
+
+div.PartieCentrale {
+    /* positionnement absolu a 26px du haut  161px de la gauche et 25 de la droite */
+    position: absolute;
+    top: 26px;
+    left: 161px;
+    right: 25px;
+    /* couleur_texte : #444 - lettre :  13px verdana - espacement_intérieur : 10px */
+    color: #444;
+    font: 13px verdana;
+    padding: 10px;
+    /* bordure : continu 3px #444*/
+    border: solid 3px #444;
+    border-radius: 10px;
+}
+
+div.PartieCentrale h1 {
+    background-color: #035;
+    color: #FFC;
+    margin: -10px -10px 17px -10px;
+    padding: 10px;
+}
+
+div.PartieCentrale h1 span {
+    color: #A00;
+}
+
+
+/********** division : les liens ***************************************************************/
+
+
+/** positionnement de la division "lesLiens" **/
+
+div.LesLiens {
+    /* position : en absolu par rapport  au body et  à 80px du haut */
+    position: fixed;
+    top: 80px;
+    left: 0px;
+    /* largeur de 158px */
+    width: 158px;
+    /* lettre 15px verdana */
+    font: 15px verdana;
+    /* bordure continu 3px #444 */
+    border: solid 3px #444;
+}
+
+
+/** on redonne une mise en forme aux liens (balise A) situés dans la division "LesLiens" **/
+
+div.LesLiens a {
+    /* les balises A : positionnement en block (par défaut inline*/
+    display: block;
+    /* texte centrer */
+    text-align: center;
+    /* lettre gras 1em sans-serif */
+    font: bold 1em sans-serif;
+    /* espacement intérieur 5px haut/bas et 10px gauche/droite */
+    padding: 5px 10px;
+    /* 5px 10px*/
+    /* alignement du texte - marge 2px en bas 0 par ailleurs */
+    margin: 0px 0px 2px 0px;
+    /* pas de soulignement */
+    text-decoration: none;
+    /* couleur texte  #FFC */
+    color: #FFC;
+    /* couleur fond en #444 */
+    background-color: #444;
+    transition: all 0.4s ease-in;
+}
+
+div.LesLiens a span {
+    display: none;
+}
+
+div.LesLiens a:hover span {
+    display: block;
+    color: #A00;
+    background-color: #AAA;
+    font: 13px verdana;
+    margin: 5px;
+    padding: 5px;
+    position: absolute;
+    top: 239px;
+    left: -2px;
+}
+
+div.LesLiens a img {
+    display: none;
+}
+
+div.LesLiens a:hover img {
+    display: block;
+    padding: 5px;
+    position: absolute;
+    top: 239px;
+    left: -2px;
+    width: 150px;
+    height: auto;
+}
+
+
+/** on inverse les deux couleurs des liens (balise A) quand on passe dessus (hover)**/
+
+div.LesLiens a:hover {
+    /* couleur texte  #444 */
+    color: #444;
+    /* couleur fond en #FFC */
+    background-color: #FFC;
+}
+
+
+/************************* partie concernant les traits  ********************************************/
+
+
+/* trait ==> couleur #330099 / largeur de 60% / épaisseur : 2px / trait plein */
+
+hr {
+    color: #330099;
+    /* IE : pour la couleur du trait  */
+    background-color: #330099;
+    /* CHROME :  pour la couleur du trait*/
+    width: 60%;
+    height: 2px;
+    border-style: solid;
+}
+
+
+/*   MOZILLA/CHROME : pour ne pas avoir une notion de 3D (trait enfoncé)  */
+
+
+/************************* partie concernant les images  *************************************/
+
+
+/* taille du logo ==> hauteur 100px  / centrer */
+
+img {
+    height: 100px;
+    display: block;
+    margin: auto;
+}
+
+
+/* taille des images intégrées dans un tableau ==> hauteur  de 150px */
+
+table img {
+    height: 150px;
+}
+
+
+/************************* partie concernant les tableaux  *************************************/
+
+
+/* tableau (ensemble) ==>  trait plein / épaisseur 1px / couleur : #336666 / largeur : 800px */
+
+table {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #336666;
+    width: 800px;
+    margin: 0 auto 0 auto;
+    /* MOZILLA / CHROME : permet de centrer le tableau :  marge haut droite bas gauche */
+}
+
+
+/* pour les lignes ==> centrer  */
+
+tr {
+    text-align: center;
+}
+
+
+/* ligne d'entête ==>  taille police 25 px */
+
+th {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #336666;
+    font-size: 25px;
+}
+
+
+/* pour les  cellules ==> la bordure (trait plein - 1px - #336666  */
+
+td {
+    border: solid 1px #336666;
+}
+
+
+/*   ++  particularités du tableau des prestations */
+
+table#tablePrestation {
+    width: 95%;
+}
+
+
+/** les images du tableau ****/
+
+table#tablePrestation img {
+    height: 30px;
+}
+
+
+/** les lignes de "class" paires ou impaires **/
+
+
+/*** NOTA  peut-être remplacé par  :  tr:nth-child()  ****/
+
+table#tablePrestation tr.trPaire {
+    background: #7FAABB;
+}
+
+table#tablePrestation tr.trImpaire {
+    background: #AAD1FF;
+}
+
+
+/** les cellules  ==> toutes ; celles qui ont du texte ; celle de la première colonne **/
+
+table#tablePrestation td {
+    width: 12%;
+    font: bold 15px verdana;
+}
+
+table#tablePrestation td.td01 {
+    width: 25%;
+    font: bold 18px verdana;
+}
+
+
+/*   ++  particularités du tableau des prestations */
+
+table .tablePrestation {
+    width: 95%;
+}
+
+
+/** les images du tableau ****/
+
+table.tablePrestation img {
+    height: 30px;
+}
+
+
+/** les lignes de "class" paires ou impaires **/
+
+
+/*
+table.tablePrestation tr.trPaire	{ background : #7FAABB;}
+table.tablePrestation tr.trImpaire	{ background : #AAD1FF;}
+*/
+
+
+/*** NOTA  peut-être remplacé par  :  ****/
+
+table.tablePrestation tr:nth-child(odd) {
+    background: #7FAABB;
+}
+
+table.tablePrestation tr:nth-child(even) {
+    background: #AAD1FF;
+}
+
+
+/** les cellules  ==> toutes ; celles qui ont du texte ; celle de la première colonne **/
+
+table.tablePrestation td {
+    width: 12%;
+    font: bold 15px verdana;
+}
+
+table.tablePrestation td.td01 {
+    width: 25%;
+    font: bold 18px verdana;
+}
