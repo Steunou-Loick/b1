@@ -17,7 +17,7 @@
     <div class="container">
         <div class="text-center">
             <h2>Administration du site</h2>
-            <h3 class="text-primary">Ajout d'une nouvelle actuali</h3>
+            <h3 class="text-primary">Ajout d'une nouvelle actualité</h3>
             <hr>
         </div>
         <div class="row">
