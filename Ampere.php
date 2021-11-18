@@ -23,7 +23,7 @@
 		<table>
 			<tr>
 
-				<th colspan="4"> Résidence "Ampere"</th>
+				<th colspan="4"> Résidence "TestAmpere"</th>
 
 			</tr>
 			<tr>
