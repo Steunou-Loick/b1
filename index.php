@@ -9,7 +9,7 @@
 ?>
 <html>
 <head>
-	<title>test location appartement</title>
+	<title>location appartement</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="FichierDeStyle.css">
@@ -30,7 +30,7 @@
 	// 		break;
 	// }
 
-	$pages = ["accueil", "Ampere", "Fresnel", "Coulomb", "Prestations", "Coordonnees"];
+	$pages = ["accueil", "Ampere", "Fresnel", "Coulomb", "Prestations", "Coordonnees", "new_utilisateur"];
 	if (in_array($page, $pages))
 	{
 		include("$page.php");

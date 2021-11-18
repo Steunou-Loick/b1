@@ -9,4 +9,5 @@
 		<a href="index.php?page=Coulomb">Coulomb<img src="Photos/Coulomb/Coulomb-vue.jpg" alt="Coulomb"></a>
 		<a href="index.php?page=Coordonnees">Coordonnées</a>
 		<a href="index.php?page=Prestations">Prestations</a>
+		<a href="index.php?page=new_utilisateur">Créer un compte</a>
 	</div>
