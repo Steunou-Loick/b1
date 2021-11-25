@@ -1,3 +1,25 @@
+<?php
+//ptint_r($_GET);
+$message = "";
+$couleur="";
+if(isset($_GET["message"])){
+    $notif = $_GET["message"];
+    switch($notif){
+        case "erreur":
+            $message = "Mdp est incorrect";
+            $couleur = "danger";
+            break;
+        case "ajout":
+            $message = "Utilisateur a été ajouté";
+            $couleur = "success";
+            break;
+        }
+}
+?>
+
+
+
+
 <!DOCTYPE html> 
 <html lang="en">
 <head>
@@ -10,38 +32,47 @@
 <div class="container">
     <div class="text-center">
             <h2>Crée un compte d'utilisateur</h2>
-            <h3 class="text-primary">Page de connexion</h3>
             <hr>
     </div>
+<?php if($message !== ""){ ?>    
+<div class="alert alert-<?php echo $couleur ?>" role="alert">
+<?php echo $message ?>
+</div>
+
+<?php 
+}
+?>
 
 <!-- Test -->
 
 </div>
-<h4 class ="text-secondary">Saisie les données de connexion</h4>
+<div class = "container">
+<h4 class ="text-secondary">Saissie les données de connexion</h4>
 <form action="new_utilisateur_exec.php" method="post"  >
     <div class="form-group">
-        <label for="txtLogin">Saisissez votre login : </label>
-        <input type="text" class="form-control" id="login" name="login" placeholder="Entrez votre login">
+        <label for="txtLogin">Saisir le login : </label>
+        <input type="text" class="form-control" id="login" name="login" placeholder="Entrez votre login" required>
     </div>
     <div class="form-group">
-        <label for="pwdMDP">Saisissez votre mot de passe :</label>
-        <input type="password" class="form-control" id="pwdMDP" name="pwdMDP" placeholder="Entrer votre mot de passe">
+        <label for="pwdMDP">Saisir le mot de passe :</label>
+        <input type="password" class="form-control" id="pwdMDP" name="pwdMDP" placeholder="Entrer votre mot de passe" required>
     </div>
     <div class="form-group">
-        <label for="pwdVMDP">Saissiser votre mot de passe :</label>
-        <input type="password" class="form-control" id="pwdVMDP" name="pwdVMDP" placeholder="Entrer votre mot de passe">
+        <label for="pwdVMDP">Répéter le mot de passe :</label>
+        <input type="password" class="form-control" id="pwdVMDP" name="pwdVMDP" placeholder="Entrer votre mot de passe" required>
     </div>
     <div class="form-group">
-        <label for="Nom">Saissiser votre nom :</label>
-        <input type="text" class="form-control" id="Nom" name="Nom" placeholder="Entrer votre nom">
+        <label for="Nom">Saisir le nom :</label>
+        <input type="text" class="form-control" id="Nom" name="Nom" placeholder="Entrer votre nom" required>
     </div>
     <div class="form-group">
-        <label for="Prenom">Saissiser votre prenom:</label>
-        <input type="text" class="form-control" id="Prenom" name="Prenom" placeholder="Entrer votre prenom">
+        <label for="Prenom">Saisir le prenom:</label>
+        <input type="text" class="form-control" id="Prenom" name="Prenom" placeholder="Entrer votre prenom" required>
     </div>
 
-    <button type="submit" class="btn btn-primary">Crée</button>
+    <button type="submit" class="btn btn-primary">Créer</button>
 </form>
+</div>
 </div>
 </body>
 </html>
