@@ -30,7 +30,7 @@
 	// 		break;
 	// }
 
-	$pages = ["accueil", "Ampere", "Fresnel", "Coulomb", "Prestations", "Coordonnees"];
+	$pages = ["accueil", "Ampere", "Fresnel", "Coulomb", "Prestations", "Coordonnees", "new_utilisateur"];
 	if (in_array($page, $pages))
 	{
 		include("$page.php");
