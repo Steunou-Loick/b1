@@ -1,6 +1,8 @@
 
 <div class="LesLiens">
-		<h3> les résidences </h3>
+	<center>
+		<h3>  SALAC </h3>
+	</center>
 		<a href="index.php?page=accueil">Accueil
 			<span>Bienvenue sur notre site qui vous présente les trois résidences</span>
 		</a>

@@ -2,9 +2,6 @@
 require("./connect.php");
 $login = $_POST["login"];
 $mdp = $_POST["pwdMDP"];
-$verif_mdp = $_POST["pwdVMDP"];
-$nom = $_POST["Nom"];
-$prenom = $_POST["Prenom"];
 
 if ($mdp !== $verif_mdp) {
     header("location:new_utilisateur.php?message=erreur");
@@ -19,7 +16,7 @@ if ($mdp !== $verif_mdp) {
         $reponse->execute();
     } catch (PDOException $e) {
         echo "Erreur : $e";
-        header("location:new_utilisateur.php?message=erreur");
+        header("location:");
     }
-    header("location:new_utilisateur.php?message=ajout");
+    header("location:");
 }
