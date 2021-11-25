@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,7 +14,7 @@
             <hr>
     </div>
 
-
+<!-- Test -->
 
 </div>
 <h4 class ="text-secondary">Saisie les données de connexion</h4>
