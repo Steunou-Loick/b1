@@ -12,4 +12,5 @@
 		<a href="index.php?page=Coordonnees">Coordonnées</a>
 		<a href="index.php?page=Prestations">Prestations</a>
 		<a href="index.php?page=new_utilisateur">Créer un compte</a>
+		<a href="index.php?page=connection">Se connecter</a>
 	</div>
