@@ -9,8 +9,8 @@ $mdp = $_POST["mdp"];
             AND mdp = SHA2(:mdp,256);";
     $reponse = $bdd->prepare($sql);
     $reponse->bindparam(":login", $login);
-    $reponse->bindparam(":mdp", $$mdp);
-    $user = $reponse->fetch(PDO::FETCH_ASSOC);
+    $reponse->bindparam(":mdp", $mdp);
+    $user = $reponse->execute();
 
     if ($user == false)
     {
@@ -18,5 +18,7 @@ $mdp = $_POST["mdp"];
     }
     else
     {
+        session_start();
+        $_SESSION["newsession"]=$login;
         header("location:index.php?page=mon_profil");
     }
