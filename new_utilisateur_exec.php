@@ -21,5 +21,5 @@ if ($mdp !== $verif_mdp) {
         echo "Erreur : $e";
         header("location:new_utilisateur.php?message=erreur");
     }
-    header("location:index.php?page=new_utilisateur&message=ajout");
+    header("location:index.php?page=connection");
 }
