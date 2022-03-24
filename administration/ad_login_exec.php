@@ -1,6 +1,14 @@
 <?php 
 session_start();
 include("./fonctions.php");
+
+// Le message
+$message = "Line 1\r\nLine 2\r\nLine 3";
+// Dans le cas où nos lignes comportent plus de 70 caractères, nous les coupons en utilisant wordwrap()
+$message = wordwrap($message, 70, "\r\n");
+// Envoi du mail
+mail('boismond-j@saint-louis29.net', 'Mon Sujet', $message);
+
 //print_r($_POST);
 //var_dump($_POST);
 $login=$_POST ["txtLogin"];
@@ -33,5 +41,6 @@ else
     //print_r($_SESSION);
     header("location:ad_tableActualites.php");
 }
+
 
 ?>
