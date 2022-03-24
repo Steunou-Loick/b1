@@ -67,20 +67,9 @@ if (isset($_GET["message"])) {
                     <button type="submit" class="btn btn-primary"><a href="/b23web/SALAC2021/index.php?page=new_utilisateur">Créer un compte</a></button>
         </form>
     </div>
-    <div class="form-group">
-        <label for="pwdMDP">Mot de passe :</label>
-        <input type="password" class="form-control" id="mdp" name="mdp" placeholder="Entrer votre mot de passe">
-    </div>
-<<<<<<< HEAD
-    <button type="submit" class="btn btn-primary"><a href="/b23web/SALAC2021/index.php?page=connection_exec">Se connecter</a></button>
-    <h6>Vous pouvez créer un compte si vous ne l'aviez pas<h6>
-    <button type="submit" class="btn btn-primary"><a href="/b23web/SALAC2021/index.php?page=new_utilisateur">Créer un compte</a></button>
-</form>
-
+   
 </div>
 </div>
-=======
->>>>>>> 976e36bcdd98ba3d98f84412fce758bd45e560d3
 </body>
 
 </html>

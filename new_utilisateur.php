@@ -55,19 +55,11 @@ if(isset($_GET["message"])){
     </div>
     <div class="form-group">
         <label for="pwdMDP">Saisir le mot de passe :</label>
-<<<<<<< HEAD
-        <input type="password" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[-+!*$@%_])([-+!*$@%_\w]{8,15})$"  class="form-control" id="pwdMDP" name="pwdMDP" placeholder="Entrer votre mot de passe" required>
-    </div>
-    <div class="form-group">
-        <label for="pwdVMDP">Répéter le mot de passe :</label>
-        <input type="password" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[-+!*$@%_])([-+!*$@%_\w]{8,15})$"  class="form-control" id="pwdVMDP" name="pwdVMDP" placeholder="Entrer votre mot de passe" required>
-=======
         <input type="password" class="form-control" id="pwdMDP" name="pwdMDP"  pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[-+!*$@%_])([-+!*$@%_\w]{8,15})$" placeholder="Entrer votre mot de passe" required>
     </div>
     <div class="form-group">
         <label for="pwdVMDP">Répéter le mot de passe :</label>
         <input type="password" class="form-control" id="pwdVMDP" name="pwdVMDP"  pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[-+!*$@%_])([-+!*$@%_\w]{8,15})$" placeholder="Entrer votre mot de passe" required>
->>>>>>> 976e36bcdd98ba3d98f84412fce758bd45e560d3
     </div>
     <div class="form-group">
         <label for="Nom">Saisir le nom :</label>
@@ -76,6 +68,10 @@ if(isset($_GET["message"])){
     <div class="form-group">
         <label for="Prenom">Saisir le prenom:</label>
         <input type="text" class="form-control" id="Prenom" name="Prenom" placeholder="Entrer votre prenom" required>
+    </div>
+    <div class="form-group">
+        <label for="motSecret">Question secret: Quel est le prénom de votre grand-mère? </label>
+        <input type="text" class="form-control" id="motSecret" name="motSecret" placeholder="Entrer votre reponse" required>
     </div>
     <button type="submit" class="btn btn-primary">Créer son compte</button>
 </form>
