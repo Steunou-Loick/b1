@@ -1,5 +1,6 @@
 <?php
 require("./connect.php");
+include("./fonction.php");
 $login = $_POST["login"];
 $mdp = $_POST["pwdMDP"];
 $verif_mdp = $_POST["pwdVMDP"];
@@ -21,7 +22,11 @@ if ($mdp !== $verif_mdp) {
         $reponse->execute();
     } catch (PDOException $e) {
         echo "Erreur : $e";
+        $message = "Ajout d'un utilisateur a échoué";
+        ecrireFichierLog (3, $message);
         header("location:new_utilisateur.php?message=erreur");
     }
+    $message = "Création d'un nouvel utilisateur réussi";
+        ecrireFichierLog (1, $message);
     header("location:index.php?page=connection");
 }

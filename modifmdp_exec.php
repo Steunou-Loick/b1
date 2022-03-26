@@ -1,5 +1,6 @@
 <?php
 require("./connect.php");
+include("./fonction.php");
 
 $mdpactu = $_POST["mdpactu"];
 $mdpnouv1 = $_POST["mdpnouv1"];
@@ -18,7 +19,7 @@ print_r($user);
 //ou s'il n'y a pas d'utilisateur qui a ce mot de passe
 
 if (($mdpnouv1 !== $mdpnouv2) or ($user == null)) {
-    $message = "La modification du mot de passe à échouée, id de l'utilisateur :" + $_COOKIE["SessId"];
+    $message = "La modification du mot de passe à échouée";
         ecrireFichierLog (1, $message);
     header("location:modifmdp.php?message=erreur");
 } else {
@@ -27,7 +28,8 @@ if (($mdpnouv1 !== $mdpnouv2) or ($user == null)) {
     $reponse1->bindparam(":mdp", $mdpnouv1);
     $reponse1->bindparam(":codeUser", $_COOKIE["SessId"]);
     $update = $reponse1->execute();
-    $message = "La modification du mot de passe validée, id de l'utilisateur :" + $_COOKIE["SessId"];
+    
+    $message = "La modification du mot de passe validée";
         ecrireFichierLog (0, $message);
     header("location:modifmdp.php?message=succesmodifmdp");
    

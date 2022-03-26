@@ -1,6 +1,6 @@
 <?php
 require("./connect.php");
-require("./fonction.php");
+include("./fonction.php");
 $login = $_POST["login"];
 $mdp = $_POST["mdp"];
 
@@ -17,9 +17,14 @@ $mdp = $_POST["mdp"];
     if ($user == false)
     {
         // la connexion n'est pas valide
-        $message = "La connexion n'est pas valide pour l'utilisateur login = " + $login;
-        ecrireFichierLog (1, $message);
-        header("location:index.php?page=connection&message=erreur");
+        try {
+            ecrireFichierLog (1, "La connexion n'est pas valide pour l'utilisateur login");
+        }
+        catch (Exception $e) {
+            print_r($e);
+            header("location:index.php?page=accueil");
+        }
+         header("location:index.php?page=connection&message=erreur");
     }
     else
     {
@@ -27,7 +32,7 @@ $mdp = $_POST["mdp"];
         // session_start();
         // $_SESSION["newsession"]=$login;
 
-        $message = "La connexion est validée pour le login = " + $login;
+        $message = "La connexion est validée";
         ecrireFichierLog (0, $message);
         setcookie('SessId', $user["codeUser"], time()+ 3600); // valable 1h
         header("location:index.php?page=mon_profil");

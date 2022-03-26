@@ -2,7 +2,7 @@
     function ecrireFichierLog ($codeType, $message)
     {
         $types = ["INFO", "WARNING", "ERROR", "ALERT"];
-        $fichier = "./administration/log/adm".date("y")."-".date("m").".log";
+        $fichier = "./logs/adm".date("y")."-".date("m").".log";
         $ligne = date("d/m/Y H:i:s")."\t".
             $types[$codeType]."\t".
             $_SERVER["REMOTE_ADDR"]."\t".

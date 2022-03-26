@@ -5,7 +5,6 @@
 	else{
 		$page = "accueil";
 	}
-	//echo $page;
 ?>
 <html>
 <head>
