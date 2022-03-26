@@ -52,7 +52,7 @@ if (empty($_COOKIE["SessId"])) {
                         <input type="password" class="form-control" id="mdpactu" name="mdpactu" placeholder="Entrez votre mdp actuel" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[-+!*$@%_])([-+!*$@%_\w]{8,15})$" required>
                     </div>
                     <div class="form-group">
-                        <label for="mdpactu">Saisir votre mot secret (réponse à la question: "Quel est le prénom de votre grand-mère?") : </label>
+                        <label for="mdpactu">Saisir votre mot secret (répondre à la question: "Quel est le prénom de votre grand-mère?") : </label>
                         <input type="motSecret" class="form-control" id="motSecret" name="motSecret" placeholder="Entrez votre mot secret" required>
                     </div>
 
