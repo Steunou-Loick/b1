@@ -69,6 +69,10 @@ if(isset($_GET["message"])){
         <label for="Prenom">Saisir le prenom:</label>
         <input type="text" class="form-control" id="Prenom" name="Prenom" placeholder="Entrer votre prenom" required>
     </div>
+    <div class="form-group">
+        <label for="motSecret">Question secret: Quel est le prénom de votre grand-mère? </label>
+        <input type="text" class="form-control" id="motSecret" name="motSecret" placeholder="Entrer votre reponse" required>
+    </div>
     <button type="submit" class="btn btn-primary">Créer son compte</button>
 </form>
 </div>
