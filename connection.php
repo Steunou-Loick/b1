@@ -1,6 +1,5 @@
 <?php
 
-mail("boismond-j@saint-louis29.net", "test", "ceci est un test");
 $message = "";
 $couleur = "";
 if (isset($_GET["message"])) {
