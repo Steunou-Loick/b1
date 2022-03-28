@@ -10,7 +10,6 @@
             $message."\t    ".
             $_SERVER["QUERY_STRING"]."\t".
             $_SERVER ["HTTP_USER_AGENT"]."\n";
-        file_put_contents($fichier, $ligne, FILE_APPEND); 
-        //FILE_APPEND: ecrire en fin de fichier
+        file_put_contents($fichier, $ligne, FILE_APPEND);
     }
 ?>

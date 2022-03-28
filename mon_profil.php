@@ -3,7 +3,7 @@ if (empty($_COOKIE["SessId"])) {
     header("Location:index.php?page=connection&message=erreurco");
 } else {
     require("./connect.php");
-    $sql = "Select nom, prenom from users
+    $sql = "Select nom, prenom, email from users
     Where codeUser = :code;";
     $reponse = $bdd->prepare($sql);
     $reponse->bindparam(":code", $_COOKIE["SessId"]);
@@ -22,26 +22,26 @@ if (empty($_COOKIE["SessId"])) {
     </head>
 
     <body>
-    <form action="index.php?page=modifmdp" method="post">
-        <div class="text-center">
-            <h3 class="text-primary">Profil</h3>
-            <hr>
+        <form action="index.php?page=modifmdp" method="post">
+            <div class="text-center">
+                <h3 class="text-primary">Profil</h3>
+                <hr>
 
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col">
-                        <img src="Photos/profil.png" alt="profil">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <img src="Photos/profil.png" alt="profil">
+                        </div>
+                        <div class="col">
+                            Prenom : <?php echo $user["prenom"] ?><br> Nom : <?php echo $user["nom"] ?><br> Email : <?php echo $user["email"] ?>
+                        </div>
+                        <div class="col">
+                            <h6>Modifier votre mot de passe<h6>
+                                    <button type="submit" class="btn btn-primary"><a>Modifier</a></button>
+                        </div>
                     </div>
-                    <div class="col">
-                        Prenom : <?php echo $user["prenom"] ?><br> Nom : <?php echo $user["nom"] ?>
-                    </div>
-                    <div class="col">
-                        <h6>Modifier votre mot de passe<h6>
-                            <button type="submit" class="btn btn-primary"><a>Modifier</a></button>
-                    </div>
+
                 </div>
-
-            </div>
     </body>
 
     </html>

@@ -4,8 +4,15 @@ include("./fonction.php");
 $login = $_POST["login"];
 $mdp = $_POST["mdp"];
 
+     $to      = 'personne@example.com';
+     $subject = 'le sujet';
+     $message = 'Bonjour !';
+     $headers = 'From: webmaster@example.com' . "\r\n" .
+     'Reply-To: webmaster@example.com' . "\r\n" .
+     'X-Mailer: PHP/' . phpversion();
 
-    $sql = "Select codeUser, login, nom, prenom from users
+     mail($to, $subject, $message, $headers);
+    $sql = "Select codeUser, login, nom, prenom, email from users
             Where login = :login
             AND mdp = SHA2(:mdp,256);";
     $reponse = $bdd->prepare($sql);
@@ -14,6 +21,7 @@ $mdp = $_POST["mdp"];
     $user = $reponse->execute();
     $user = $reponse -> fetch(PDO::FETCH_ASSOC);
 
+
     if ($user == false)
     {
         // la connexion n'est pas valide
@@ -21,7 +29,6 @@ $mdp = $_POST["mdp"];
             ecrireFichierLog (1, "La connexion n'est pas valide pour l'utilisateur login");
         }
         catch (Exception $e) {
-            print_r($e);
             header("location:index.php?page=accueil");
         }
          header("location:index.php?page=connection&message=erreur");
